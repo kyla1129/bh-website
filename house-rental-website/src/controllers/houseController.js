@@ -27,4 +27,4 @@ class HouseController {
     }
 }
 
-export default HouseController;
+module.exports = HouseController;
