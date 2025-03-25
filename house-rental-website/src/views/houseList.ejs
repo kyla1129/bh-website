@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rental Listings</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Available Houses for Rent</h1>
+    </header>
+    <main>
+        <ul class="house-list">
+            <% houses.forEach(function(house) { %>
+                <li class="house-item">
+                    <h2><%= house.title %></h2>
+                    <p>Location: <%= house.location %></p>
+                    <p>Price: $<%= house.price %> per month</p>
+                    <a href="/houses/<%= house.id %>">View Details</a>
+                </li>
+            <% }); %>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2023 House Rental Website</p>
+    </footer>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
